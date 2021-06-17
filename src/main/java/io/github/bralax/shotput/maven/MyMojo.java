@@ -13,6 +13,7 @@ import org.slf4j.Logger;
 
 import io.github.bralax.shotput.Config;
 import io.github.bralax.shotput.Shotput;
+import io.swagger.v3.oas.annotations.Parameters;
 
 @Mojo( name="apidoc" )
 public class MyMojo extends AbstractMojo {
@@ -53,6 +54,9 @@ public class MyMojo extends AbstractMojo {
     @Parameter
     public String logo;
 
+    @Parameter(defaultValue = "false")
+    public boolean disableMethodParsing;
+
     public void execute() throws MojoExecutionException, MojoFailureException {
         Logger logger = new MavenLogger(getLog());
         Shotput.setLogger(logger);
@@ -63,6 +67,7 @@ public class MyMojo extends AbstractMojo {
         config.baseUrl = this.baseURL;
         config.description = this.description;
         config.interactive = this.interactive;
+        config.disableMethodParsing = this.disableMethodParsing;
         config.logo = this.logo;
         Shotput shot = new Shotput(config, srcDir, generateExcel, generateHTML, generateOpenAPI, outputDir);
         try {

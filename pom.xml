@@ -4,7 +4,7 @@
   <groupId>io.github.bralax</groupId>
   <artifactId>shotput-maven-plugin</artifactId>
   <packaging>maven-plugin</packaging>
-  <version>0.1</version>
+  <version>0.1.1</version>
   <name>Shotput Maven Plugin</name>
   <description>A Maven plugin for turning ShotPut docs as a maven task</description>
   <url>http://github.com/bralax/ShotPut-maven</url>
@@ -68,7 +68,7 @@
     <dependency>
       <groupId>io.github.bralax</groupId>
       <artifactId>shotput</artifactId>
-      <version>0.3</version>
+      <version>0.4</version>
     </dependency>
   </dependencies>
 

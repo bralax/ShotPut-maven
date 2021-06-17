@@ -38,6 +38,7 @@ To do so, change the `pom.xml` with the following options. Each configuration op
     <baseURL>https://example.com</baseURL> <!-- Default: http://localhost:3000 -->
     <description>Doc Description</description> <!-- Default: '' -->
     <interactive>false</interactive> <!-- Default: true -->
+    <disableMethodParsing>true</disableMethodParsing> <!-- Default: false -->
     <logo>src/main/resources/img.png</log> <!-- Default: '' -->
   </configuration>
 </plugin>
